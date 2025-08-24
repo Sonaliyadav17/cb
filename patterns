@@ -1,0 +1,147 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        //int n = 5;
+        //pattern7(5);
+        //p8(5);
+        //p9(5);
+        //p11(5);
+        //p12(5);
+        //p25(5);
+        
+        p27(5);
+        
+        
+    }
+    
+    public static void p27(int n){
+        
+        for(int i = 0; i <= n-1 ; i++){
+            for(int j = 1; j <= n-i-1; j++){
+                System.out.print(" ");
+            }
+            int m = 1;
+            for(int j = 1; j <= 2*i+1; j++){
+                
+                if(i < j){
+                    System.out.print(m);
+                    m++;
+                }
+                else{
+                    System.out.print(m);
+                }
+                
+                
+                
+            }
+            System.out.println("");
+        }    
+    }
+    
+    public static void p25(int n){
+        int m = 1;
+        for(int i = 0; i <= n-1 ; i++){
+            for(int j = 1; j <= n-i-1; j++){
+                System.out.print("  ");
+            }
+            for(int j = 1; j <= 2*i+1; j++){
+                System.out.print(m+" ");
+                m++;
+                
+            }
+            System.out.println("");
+        }    
+    }
+    
+    
+    public static void p12(int n){
+        for(int i = 0; i <= n-1 ; i++){
+            for(int j = 1; j <= n-i-1; j++){
+                System.out.print("  ");
+            }
+            for(int j = 1; j <= 2*i+1; j++){
+                if(j%2 == 0){
+                    System.out.print("! ");
+                }
+                else{
+                    System.out.print("* ");
+                }
+                
+            }
+            System.out.println("");
+        }    
+    }
+    
+    public static void p11(int n){
+        for(int i = 0; i <= n-1 ; i++){
+            for(int j = 1; j <= n-i-1; j++){
+                System.out.print("  ");
+            }
+            
+            for(int j = 1; j <= 2*i+1; j++){
+                if(j%2 == 0){
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("* ");
+                }
+                
+            }
+            System.out.println("");
+        }
+    }
+    
+    public static void p9(int n){
+        for(int i = 0; i <= n-1 ; i++){
+            for(int j = 1; j <= n-i+1; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= 2*i+1; j++){
+                System.out.print("*");
+            }
+            
+            System.out.println("");
+        }
+    }
+    
+    
+    public static void p8(int n ){
+        int p = n;
+        for(int i = 1; i <= n ; i++){
+            for(int j = 1; j <= n; j++){
+                if(i == j || j == n-i+1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+                
+            
+                
+            }
+            System.out.println("");
+        }
+    }
+    
+    
+    public static void pattern7(int n){
+        for(int i = 1; i <= n ; i++){
+            for(int j = 1 ; j <= n; j++){
+                if(i == 1 || i == n){
+                    System.out.print("*");
+                }
+                else{
+                    if(j == 1 || j == n){
+                        System.out.print("*");
+                    }
+                    else{
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println("");
+        }
+    }
+}
