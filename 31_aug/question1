@@ -1,0 +1,21 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 32145;
+        int sum = 0;
+       int place = 1;
+       
+       while(n >0){
+           int f = n %10;
+           
+           sum = (int) (sum+ place*Math.pow(10,f-1));
+           n = n/10;
+           place++;
+       }
+        
+        System.out.println(sum);
+    }
+}
