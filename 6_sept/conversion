@@ -1,0 +1,40 @@
+// decimal to binary
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 115;
+        int a = 0 ;
+        int b = 0 ;
+        while(n > 0){
+            int r = n%2;
+            
+            b = (int)( b + (r * Math.pow(10,a)));
+            a++;
+            n = n/2;
+        }
+        System.out.println(b);
+    }
+}
+
+
+// binary to decimal
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 1110011;
+        int a = 0 ;
+        int b = 0 ;
+        while(n > 0){
+            int r = n%10;
+            
+            b = (int)( b + (r * Math.pow(2,a)));
+            a++;
+            n = n/10;
+        }
+        System.out.println(b);
+    }
+}
