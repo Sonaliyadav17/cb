@@ -1,0 +1,28 @@
+#//increment -- post and pre
+
+class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        System.out.println(a++);  //10
+        System.out.println(a);   //11
+        System.out.println(++a);  // 12
+        System.out.println(a);  //12
+    }
+}
+
+
+# Ques 
+
+class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 12;
+        
+        int d = a++ + --b + 67 + a-- + b++ + ++b +2;
+        
+        System.out.println(d); #125
+        System.out.println(a); #10
+        System.out.println(b); #13
+        
+    }
+}
