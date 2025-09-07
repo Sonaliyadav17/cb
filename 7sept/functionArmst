@@ -1,0 +1,42 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static void main(String[] args){
+        int n = 1634;
+        
+        int temp = fun1(n);
+        
+        boolean ans = fun(n,temp);
+        System.out.println(ans);
+    }
+    
+    public static int fun1(int num){
+        int p = 0;
+        
+        while(num > 0){
+            int r = num % 10;
+            p++;
+            num = num/10;
+        }
+        
+        return p ;
+        
+    }
+    
+    public static boolean fun(int num, int b){
+       int sum = 0;
+       int temp = num;
+       
+        while(num > 0){
+            int r =num%10;
+            sum= (int) (sum + Math.pow(r,b));
+            num /= 10;
+    
+        }
+        System.out.println(sum);
+        
+        return (sum == temp);
+    }
+}
