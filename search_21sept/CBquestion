@@ -1,0 +1,43 @@
+//simple maths------------------------------
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        long n = 1000000000000000l;
+        int k = 10;
+        double x = Math.pow(n, 1.0 / k);
+        System.out.println(x);
+    }
+}
+
+// binary ------------------------------
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        long n = sc.nextLong();
+        long k = sc.nextLong();
+        
+        long s = 0 ;
+        long e = n;
+        long ans = -1;
+        
+        while(s <= e){
+            long mid = (e + s)/2;
+            
+            if(Math.pow(mid, k) <= n){
+                ans = mid;
+                s = mid + 1;
+            }
+            else{
+                e = mid - 1;
+            }
+        }
+        System.out.println(ans);
+    }
+}
